@@ -2,6 +2,9 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 def threshold(x):
 	cond = tf.less(x, tf.zeros(tf.shape(x), dtype = x.dtype))
 	out = tf.where(cond, tf.zeros(tf.shape(x)), tf.ones(tf.shape(x)))

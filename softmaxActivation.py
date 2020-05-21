@@ -5,16 +5,17 @@ import matplotlib.pyplot as plt
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-h = np.linspace(-10,10,50)
-out = tf.nn.relu(h)
+h = np.linspace(-10, 10, 50)
+
+out = tf.nn.softmax(h)
 
 init = tf.global_variables_initializer()
 
 with tf.Session() as sess:
 	sess.run(init)
 	y = sess.run(out)
-	plt.xlabel('input')
-	plt.ylabel('output')
-	plt.title('Rectified Linear Unit')
+	plt.xlabel('inputs')
+	plt.ylabel('outputs')
+	plt.title('Softmax Activation Function')
 	plt.plot(h, y)
 	plt.show()
