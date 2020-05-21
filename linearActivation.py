@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+
 X_in = tf.Variable(tf.random_normal([1,3], 0, 1))
 
 b = tf.Variable(tf.random_normal([1,1], 0, 1))
