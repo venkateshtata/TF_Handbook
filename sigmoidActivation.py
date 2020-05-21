@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+
 h = np.linspace(10, 10, 50)
 
 out = sigmoid(h)
